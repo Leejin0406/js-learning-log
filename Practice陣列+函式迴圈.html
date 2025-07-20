@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript 陣列</title>
+</head>
+<body>
+    <script>
+        /*這題概念尚未釐清2025/07/19
+        let classroom=[
+            {name:"小明", scores:[80, 75, 90]},
+            {name:"小華", scores:[70, 80, 79]},
+            {name:"小美", scores:[90, 90, 90]}
+        ];
+         function getAverage(scores){     
+            let sum=0; 
+
+            for(let i=0; i<scores.length; i++){
+                sum+=scores[i];
+            }
+         
+            let avg= sum/scores.length;
+            return avg.toFixed(2);
+        }
+        
+        for(let i=0; i<classroom.length; i++){
+            let student=classroom[i];
+            let avg=getAverage(student.scores);
+            console.log(`${student.name}的平均分數是${avg}`);
+        }
+        */
+
+        /*物件+陣列+函式呼叫
+        let student={
+            name:"小明",
+            age:18,
+            scores:[80, 75, 90],
+            sayHello:function(){
+                console.log(`你好，我是${this.name}，我今年${this.age}歲。`);
+            },
+            getAverage:function(){
+                let avg=0;
+                for(let i=0; i<this.scores.length; i++){
+                avg+=student.scores[i];
+            }
+            avg/=student.scores.length;
+            console.log(`我的平均分數是` + avg.toFixed(2));
+            }
+        } 
+        student.sayHello();
+        student.getAverage();
+        */
+
+        //多物件協作+方法呼叫+巢狀結構
+        //一個陣列裡面放著三個學生的資料
+        classroom=[
+
+            //一個物件裡面放著三個屬性
+            {name:"小明", age:18, scores:[80, 75, 90],
+
+                //物件裡面的方法，用來儲存迴圈算出來的平均分數跟在主控台打招呼
+                getAverage:function(){
+
+                    //創建一個變數用來累加每一筆分數等一下在迴圈裡面使用
+                    let sum=0;
+
+                    //每跑一次就變數就會加一次成績
+                    for(let i=0; i<this.scores.length; i++){
+                        sum+=this.scores[i];
+                    }
+
+                    //創建一個變數用來把抓到成績做除法
+                    let avg=sum/this.scores.length;
+
+                    //除完後取到小數點第二位
+                    avg=avg.toFixed(2);
+
+                    //回傳值給函式，這樣在外面呼叫這個函式的時候才會有東西
+                    return (`我的平均分數是${avg}`);
+                },
+
+                //這個方法用來在主控台裡面印出字
+                sayHello:function(){
+                    return (`你好，我是${this.name}，今年${this.age}歲`);
+                }
+            },
+            {name:"小華", age:17, scores:[70, 80, 79],
+                getAverage:function(){
+                    let sum=0;
+                    for(let i=0; i<this.scores.length; i++){
+                        sum+=this.scores[i];
+                    }
+                    let avg=sum/this.scores.length;
+                    avg=avg.toFixed(2);
+                    return (`我的平均分數是${avg}`);
+                },
+                sayHello:function(){
+                    return (`你好，我是${this.name}，今年${this.age}歲`);
+                }
+            },
+            {name:"小美", age:16, scores:[90, 90, 90],
+                getAverage:function(){
+                    let sum=0;
+                    for(let i=0; i<this.scores.length; i++){
+                        sum+=this.scores[i];
+                    }
+                    let avg=sum/this.scores.length;
+                    avg=avg.toFixed(2);
+                    return (`我的平均分數是${avg}`);
+                },
+                sayHello:function(){
+                    return (`你好，我是${this.name}，今年${this.age}歲`);
+                }
+            },
+        ];
+        
+        //這個迴圈每跑一次就會呼叫一次方法
+        for(let i=0; i<classroom.length; i++){
+
+            //呼叫上面物件裡的方法
+            console.log(classroom[i].sayHello());
+            console.log(classroom[i].getAverage());
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript 陣列</title>
+</head>
+<body>
+    <script>
+        /*陣列巢狀迴圈運用
+        let classroom=[
+            {name: "小明", scores:[80, 75, 90]},
+            {name: "小華", scores:[70, 80, 79]},
+            {name: "小美", scores:[90, 90, 90]},
+        ]
+
+            for(let i=0; i<classroom.length; i++){      //每跑一次這層迴圈的時候就會抓一筆學生的資料
+                let sum=0;
+                let ans="";
+                for(let j=0; j<classroom[i].scores.length; j++){       //每跑一次外層迴圈裡面的迴圈就會跑一次學生的成績
+                sum+=classroom[i].scores[j];
+
+                }
+                sum/=classroom[i].scores.length;
+
+                ans+=sum.toFixed(2);
+                console.log(`${classroom[i].name}的平均分數是${ans}`);
+            }
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JavaScript 練習物件</title>
+</head>
+<body>
+    <script>
+        /*基本物件的操作
+        let obj=new Object();
+            obj.x=3;
+            obj.y=4;
+            obj.show=function(){
+                    console.log(this.x, this.y);
+            };
+        
+        console.log(obj);
+        console.log(obj.x + obj.y);
+        obj.show();
+        */
+
+        /*JSON物件表示法(建立物件的簡單寫法)
+        let obj1={};
+        let obj2={
+            x:2,
+            y:3,
+            show:function(){
+                console.log(this.x + this.y);
+            }
+        }
+        */
+
+        /*建立物件
+       let man=new Object();    //建立空白的物件
+       man.age=18;              
+       man.name="小明";
+       man.talk=function(){
+        console.log("Hello 我是", this.name, "今年", this.age);
+       };
+
+       console.log(man);
+       console.log(man.age>20);     //使用物件也可以用來判斷true或false
+       man.talk();                  //呼叫物件裡的方法(函式)
+       */
+
+       //使用JSON建立物件
+       /*
+       let man={
+            age:15,
+            name:"春嬌",
+            talk:function(){;          //建立空白的物件
+                console.log("Hello 我是", this.name, "今年", this.age);
+                }
+        };
+       console.log(man);
+       */
+    </script>
+</body>
+</html>
