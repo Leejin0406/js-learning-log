@@ -48,6 +48,55 @@
         }
         console.log(checkAllScores([85, 42, 76, 59]));
         */
+
+        /*使用.map()，用來把原本的每一個元素，轉換成一個新的東西，並回傳一個新的陣列
+        function addHonorific(names){
+            let newNames= names.map(name=>("尊敬的" + name));
+            return newNames;
+        }
+       
+        console.log(addHonorific(["小明", "小美"]));
+        */
+
+        /*使用.map()搭配if判斷式
+        function gradeWithRemark(scores){
+            let newArray= scores.map(score=>{
+                if(score>=90){
+                    return score + "(優秀)";
+                }
+                else if(score>=60){
+                    return score + "(及格)";
+                }
+                else{
+                    return score + "(不及格)";
+                }
+            })
+            return newArray;
+        }
+               
+        console.log(gradeWithRemark([95, 82, 48, 100 ]));
+        */
+
+        function processStudentGrades(students){
+                return students.map(student=>{
+                        if(student.score>=90){
+                            return student.name + ":優秀";
+                        }
+                        else if(student.score>=60){
+                            return student.name + ":及格";
+                        }
+                        else{
+                            return student.name + ":不及格";
+                        }
+                    
+                });
+        }
+            let students=[
+                {name:"小明", score:95},
+                {name:"小美", score:82},
+                {name:"小華", score:48},
+            ]
+        console.log(processStudentGrades(students));
     </script>
 </body>
 </html>
