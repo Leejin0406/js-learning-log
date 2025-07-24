@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="CSS-selector.css"/>
+        <title>for迴圈加強</title>
+    </head>
+    <body>
+        <script>
+            /*印出1~10
+            for(let i=0; i<=10; i++){
+                console.log(i);
+            };
+
+            印出1~20之間的偶數            
+            for(let i=0; i<=20; i+=2){
+                console.log(i);
+            };
+
+            印出10~1
+            for(let i=10; i>=1; i--){
+                console.log(i);
+            };
+            */
+
+            /*印出陣列的每個數字
+            const arr=[3, 8, 1, 5, 7];
+            
+            for(let i=0; i<arr.length; i++){
+                console.log(arr[i]);
+            };
+            */
+
+            /*把陣列裡的每個數字加起來
+            const arr=[3, 8, 1, 5, 7];
+
+            let sum=0;
+            for(let i=0; i<arr.length; i++){
+                sum+=arr[i];
+            };
+
+            console.log(sum);
+            */
+
+            /*計算陣列中大於60的數字有幾個
+            const scores=[40, 80, 30, 100, 65, 59];
+
+            let count=0;
+            
+            for(let i=0; i<scores.length; i++){
+                if(scores[i]>=60){
+                count++
+                }
+            }
+            console.log(count);
+            */
+            
+            /*印出陣列中最大的數字      (第一次嘗試這題的時候，邏輯有點卡住，需要多練習)
+            const nums=[12, 5, 27, 31, 8, 19];
+
+            設一個變數max等於陣列第一個數字
+            let max=nums[0];
+
+            讀取陣列每個數字的迴圈
+            for(let i=0; i<nums.length; i++){
+
+                如果陣列中的數字大於max
+                if(nums[i]>max){
+
+                    就將max直接等於現在正在跑的陣列的數字
+                    max=nums[i];
+                }
+            }
+            最後在迴圈外印出max，因為我們只需要最大的數字一個而已
+            console.log(max);
+            */
+
+            /*判斷陣列中最高分是幾分，以及及格人數有幾個人
+            const scores=[72, 59, 88, 44, 91, 66, 53];
+            let hightScores=scores[0];
+            let isPassed=0;
+
+            for(let i=0; i<scores.length; i++){
+                if(scores[i]>hightScores){
+                    hightScores=scores[i];
+                }
+                if(scores[i]>=60){
+                    isPassed++;
+                }
+            }
+            console.log("最高分是" + hightScores);
+            console.log("及格人數有" + isPassed + "人");
+            */
+
+        </script>
+    </body>
+</html>
